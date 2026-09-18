@@ -4,13 +4,21 @@ Game simulasi football manager — fiksi, offline-first, open-source (GPL-3.0).
 Terinspirasi Football Manager, dibangun dengan Expo + TypeScript agar bisa scan QR via Expo Go.
 
 ## Status
-P0 — setup awal. Lihat `VISION.md` untuk arah, `docs/` untuk referensi engine.
+P1 — engine + data fiksi + simulasi semusim terverifikasi. Lihat `VISION.md` untuk arah, `docs/` untuk referensi engine.
 
-## Quickstart (akan aktif setelah init Expo)
+## Quickstart
 ```bash
 npm install
 npx expo start
 # scan QR dengan Expo Go (satu WiFi)
+```
+
+## Verifikasi engine (tanpa HP)
+```bash
+npm run sim:smoke
+# Membangun 8 tim fiksi x 18 pemain -> 56 laga double round-robin ->
+# validasi determinisme, konsistensi poin, urutan tabel, top skor.
+# Lihat docs/CALIBRATION.md untuk karakter scoring engine.
 ```
 
 ## Struktur rencana
